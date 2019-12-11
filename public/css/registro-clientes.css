@@ -1,0 +1,205 @@
+/*Luis Andres Calvo Gonzalez, Karis Sofía López Oviedo
+Proyecto 1 Ad Astra*/
+
+
+/*Inicio de estilos*/
+
+/*estilos del body*/
+
+body{
+    font-size: 16px;
+    color: #ebebf3;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    min-width: 100%;
+    background-image:url(../img/registro-1.jpg);
+    background-size:cover;
+}
+
+h1{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+i{
+  font-size: 1.5rem;
+  margin: 35px 25px;
+}
+
+/* fin estilos del body*/
+
+
+
+
+/*estilos nav*/
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+ 
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+  padding: 16px 15px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  color:  #fb403b;
+}
+/*Fin de estilos del nav*/
+
+.anouncement{
+    background-color: #fb403b;
+    color: #ffffff;
+    width: 35%;
+    padding: 25px 30px;
+    position: absolute;
+    top: 390px;
+  }
+
+
+
+/*estilos de inputs y labels*/
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  input[type=date] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  input[type=number] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #ffffff;
+    color: #fb403b;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+  }
+
+
+  
+  input[type=submit]:hover {
+    background-color: #dadada;
+    color: #000000;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  /*fin estilos de inputs y labels*/
+
+
+  /*estilos botones*/
+  
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: none;
+    color: #fb403b;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+    
+.button:hover {
+    background-color: #dadada;
+    color: #000000;
+    transition: all 0.5s;
+    
+  }
+
+/*fin estilos botones*/
+  
+  
+
+/* estilos columns*/
+* {
+    box-sizing: border-box;
+  }
+  
+  /*equal columns */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: auto;
+  }
+  
+  /* floats columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* fin estilos columns*/
+
+
+/* estilos footer*/
+
+  .icons{
+    text-align: center;
+  }
+  
+  #footer{
+    height: 200px;
+  }
+

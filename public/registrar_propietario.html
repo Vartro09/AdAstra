@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/reset.css">
+    <link href='https://unpkg.com/boxicons@2.0.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/validacion.css">
+    <link rel="stylesheet" href="../public/css/administrador.css">
+    <title>Registro Propietario</title>
+</head>
+
+<body class="grid-admin">
+
+    <header id="header-admin">
+        <div class="header-admin-container">
+            <a class="user-menu-link" href="#"><i class='bx bx-log-in-circle'></i>Iniciar Sesión</a>
+        </div>
+    </header>
+
+
+    <main id="main-admin">
+        <div class="main-admin-titulo">
+            <h1>Registro de Propietario</h1>
+        </div>
+
+        <form id="form" action="#">
+
+            <div class="upload-img">
+                <img src="" alt="" class="img_registro" id="portada">
+                <button id="btnSeleccionarImagen" type="button" id="img-uploader-portada"><i
+                        class='bx bx-cloud-upload'></i></button>
+                <p class="text-center">Subir imagen</p>
+            </div>
+
+            <div id="form-container">
+
+                <div>
+                    <label for="#">Primer Nombre</label>
+                    <input id="txt-nombre" type="text" placeholder="Ingrese el primer nombre">
+                </div>
+
+                <div>
+                    <label for="#">Segundo Nombre (opcional)</label>
+                    <input id="txt-snombre" type="text" placeholder="Ingrese el segundo nombre">
+                </div>
+
+                <div>
+                    <label for="#">Primer Apellido</label>
+                    <input id="txt-primer-apellido" type="text" placeholder="Ingrese el primer apellido">
+                </div>
+
+                <div>
+                    <label for="#">Segundo Apellido</label>
+                    <input id="txt-segundo-apellido" type="text" placeholder="Ingrese el segundo apellido">
+                </div>
+
+                <div>
+                    <label for="#">Género</label>
+                    <select id="txt-genero">
+                        <option value="" selected="selected" disabled="disabled">Seleccionar Género
+                        </option>
+                        <option value="Hombre">Hombre</option>
+                        <option value="Mujer">Mujer</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="#">Correo electrónico</label>
+                    <input id="txt-correo" type="email" placeholder="Ingrese el correo">
+                </div>
+
+                <div>
+                    <label for="#">Cédula</label>
+                    <input id="txt-id" type="text" placeholder="Ingrese la cédula">
+                </div>
+
+                <div>
+                    <label for="#">Fecha de nacimiento</label>
+                    <input id="txt-fecha" type="date" placeholder="Ingrese la Fecha de nacimiento">
+                </div>
+
+                <div>
+                    <label for="#">Ubicación</label>
+                    <textarea id="txt-ubicacion"></textarea>
+                </div>
+
+                <div>
+                    <label for="#">Provincia</label>
+                    <select id="txt-provincia">
+                        <option value="" selected="selected" disabled="disabled">Seleccionar Provincia
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="#">Cantón</label>
+                    <select id="txt-canton">
+                        <option value="" selected="selected" disabled="disabled">Seleccionar Cantón
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="#">Distrito</label>
+                    <select id="txt-distrito">
+                        <option value="" selected="selected" disabled="disabled">Seleccionar Distrito
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="btn_registrar" type="button">Registrar</button>
+
+        </form>
+
+    </main>
+
+    <aside id="sidenav-admin">
+
+        <div class="sidebar">
+
+            <div class="sidenav-menu sidenav-register">
+                <a class="logo"><img src="../public/img/CR T logo.png" alt="logo CR Ticket"></a>
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.cloudinary/1.0.18/jquery.cloudinary.js"
+        type="text/javascript"></script>
+    <script src="https://widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+    <script src="js/servicio_imagen.js"></script>
+    <!--Servicio y controlador-->
+    <script src="js/servicio_propietario.js"></script>
+    <script src="js/controlador_registrar_propietario.js"></script>
+    <!--Ubicaciones-->
+    <script src="js/controlador-ubicaciones.js"></script>
+    <!-- <script src="js/controlador-lista-bd.js"></script> -->
+</body>
+
+</html>

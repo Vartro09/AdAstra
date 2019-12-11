@@ -1,0 +1,332 @@
+/*Luis Andres Calvo Gonzalez, Karis Sofía López Oviedo
+Proyecto 1 Ad Astra*/
+
+
+/*
+--------------------------------------------------------------------
+                          WINDOW MODAL
+--------------------------------------------------------------------
+*/
+
+.modal{
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  z-index: 999999999;
+  background: rgba(0,0,0,0.75);
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.modal .content-modal{
+  width: 100%;
+  max-width: 400px;
+  position: fixed;
+  left: 52%;
+  top: -100vh;
+  transition: top 0.35s ease;
+  margin-left: -250px;
+  background: white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  z-index: 999999999;
+}
+
+.content-modal-form{
+  width: 100%;
+  height: 200px;
+  color: #fb403b;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn_Ingresar{
+ width: 100px;
+ box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.37);
+ background-color: #FB403B;
+ color: #fff;
+ border: none;
+ padding:10px 0;
+ text-align: center;
+ border-radius: 4px;
+ cursor: pointer;
+}
+
+.content-modal-form-input{
+  margin-bottom: 30px;
+}
+
+.content-modal-form-input input{
+  border-radius: 6px;
+  width: 250px;
+  height: 35px;
+}
+
+.modal article{
+  height: 200px;
+  background: #FFF;
+}
+
+.modal h2{
+  text-align: center;
+  color: #7B7B7B ;
+  margin-top: 60px;
+  font-size: 30px;
+}
+
+.modal h3{
+  font-size:20px; 
+  margin-bottom: 15px;
+}
+
+.close-modal{
+  color: #fb403b;
+  position: absolute;
+  top: 0.2em;
+  right: 0.375em;
+  margin:0;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.modal a:hover{
+  color: #c0392b;
+}
+
+.modal:target{
+  opacity: 1;
+  top:0;
+}
+
+
+.modal .btn-close-modal{
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  z-index: 9999999991;
+}
+
+.modal:target .content-modal{
+  top: 50px;
+  transition: top 0.35s ease;
+}
+
+.error_input{
+  border: 2px solid red;
+}
+
+/*Inicio de estilos*/
+
+/*estilos del body*/
+
+body{
+    font-size: 16px;
+    color: #ebebf3;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+h1{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+i{
+  font-size: 1.5rem;
+  margin: 35px 25px;
+}
+
+/* fin estilos del body*/
+
+/*estilos nav*/
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+ 
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+  padding: 16px 15px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  color:  #fb403b;
+}
+
+
+/* Fin Estilos Nav*/
+
+
+/*Estilos Banner*/
+#cta{
+  background-image:url(../img/landing-bg.jpg);
+  background-size:cover;
+  height: 475px;
+}
+
+
+/* Estilos cards*/
+#cards{
+  margin-bottom: 65px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Float Columns*/
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.row {margin: 0}
+
+/* Clear floats columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  margin: 20px;
+  text-align: center;
+  color: #000000;
+  background-color: #f1f1f1;
+  position: relative;
+  top: -45px;
+}
+
+.anouncement{
+  background-color: #fb403b;
+  width: 35%;
+  padding: 25px 30px;
+  position: absolute;
+  top: 390px;
+}
+
+
+/* Estilos columns para fecha y descripción de eventos */
+* {
+  box-sizing: border-box;
+}
+
+/* Unequal Columns */
+.container .column {
+  float: left;
+  padding: 10px;
+  height: auto;
+}
+
+.container .left {
+  width: 25%;
+}
+
+.container .right {
+  width: 75%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Fin Estilos Cards */
+
+
+/* Estilos Botones */
+
+.button-container{
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #fb403b;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1rem;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Fin Estilos Botones */
+
+
+/*Estilos Footer */
+
+.icons{
+  text-align: center;
+}
+
+#footer{
+  height: 200px;
+}
+
+/*Fin Estilos Footer */

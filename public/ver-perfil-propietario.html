@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/reset.css">
+    <link href='https://unpkg.com/boxicons@2.0.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/validacion.css">
+    <link rel="stylesheet" href="../public/css/administrador.css">
+    <title>Mi Perfil</title>
+</head>
+
+<body class="grid-admin">
+
+    <header id="header-admin">
+        <div class="header-admin-container">
+            <a class="user-menu-link" href="#"><i class='bx bxs-face'></i> Ver Perfil</a>
+            <a class="user-menu-link" href="#"><i class='bx bx-power-off'></i> Cerrar Sesión</a>
+        </div>
+    </header>
+
+
+    <!--Main-->
+    <main id="main-admin">
+        <div class="main-admin-titulo card-title">
+            <h1>Perfil del propietario</h1>
+        </div>
+
+        <div class="user-profile-container">
+            <div class="profile-saludo">
+                <h2 class="profile-h2">Saludos <span id="txt-nombre"></span></h2>
+                <img src="../public/img/placeholder.jpg" id="avatar">
+            </div>
+            <div class="profile-content">
+                <div class="profile-titles">
+                    <p>Correo:</p>
+                    <p>Identificación:</p>
+                    <p>Primer apellido:</p>
+                    <p>Segundo apellido:</p>
+                </div>
+                <div class="profile-info">
+                    <p id="txt-correo"></p>
+                    <p id="txt-id"></p>
+                    <p id="txt-primer-apellido"></p>
+                    <p id="txt-segundo-apellido"></p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <aside id="sidenav-admin">
+
+        <div class="sidebar">
+
+            <div class="sidenav-menu">
+                <a class="logo"><img src="../public/img/CR T logo.png" alt="logo CR Ticket"></a>
+            </div>
+            <ul class="sidenav-menu">
+                <li class="sidenav-menu-item"><a href="listar_eventos.html"></i>Eventos</a></li>
+                <li class="sidenav-menu-item"><a href="listar_recintos.html"></i>Recintos</a></li>
+                <li class="sidenav-menu-item"><a href="#"></i>Usuarios</a></li>
+                <li class="sidenav-menu-item"><a href="#"></i>Categorias</a></li>
+                <li class="sidenav-menu-item"><a href="#"></i>Ofertas</a></li>
+                <li class="sidenav-menu-item"><a href="#"></i>Impuestos</a></li>
+                <li class="sidenav-menu-item"><a href="#"></i>Reportes</a></li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <!--Scripts-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--Servicio y controlador-->
+    <script src="js/servicio_propietario.js"></script>
+    <script src="js/controlador_ver-perfil-usuarios.js"></script>
+</body>
+
+</html>
