@@ -2,8 +2,9 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" href="css/landing.css">
-	<link rel="stylesheet" type="text/css" href="css/style_impuestos.css">
+    <link rel="stylesheet" href="../public/css/reset.css">
+    <link rel="stylesheet" href="../public/css/administrador.css">
+	
 </head>
 <body>
 
@@ -24,32 +25,33 @@
 
     </header>
 
-	<div class="div_center">
-	<div class="div_content">
-	
-	<h1>Impuestos</h1>
+<main id="main-admin">
+	<div class="main-admin-titulo">
+            <h1>Impuestos</h1>
+    </div>
 
 	<p>Defina el porcentaje para cada uno de los impuestos</p>
 
-	 <form class="" id="">
-            <div>
-                <label for="txt_Imp_Ventas">Nombre del Impuesto</label>
-                <input type="text" id="txt_Imp_Ventas">
-            </div>
+    <form id="form" action="#">
+    <div id="form-container">
 
-            <div>
-                <label for="nmb_Imp">Porcentaje del Impuesto</label>
-                <input type="number" id="nmb_Imp" min="0" max="999">
-            </div>
-            <button type="button" class="btn_Registrar" id="btnRegistrarImpuesto">Registar Impuesto</button>
+                <div>
+                    <label for="#">Nombre del Impuesto</label>
+                    <input id="txt_Imp_Ventas" type="text" placeholder="Ingrese el nombre del impuesto">
+                </div>
+
+                <div>
+                    <label for="#">Porcentaje del Impuesto</label>
+                    <input id="nmb_Imp" type="number"  min="0" max="999">
+                </div>
+            
+    </div>
+
+    <button type="button" id="btnRegistrarImpuesto" class="btn_Registrar">Registrar Impuesto</button>
+
+            <button type="button" class="btn_Registrar"  id="btnImpRegistrados">Ver Impuestos Registrados</button>
     </form>
-
-    <button type="button" class="btn_Registrar"  id="btnImpRegistrados">Ver Impuestos Registrados</button>
-
-	</div>
-
-	</div>
-
+</main>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="js/servicio_impuestos.js"></script>
     <script src="js/controlador_impuestos.js"></script>
