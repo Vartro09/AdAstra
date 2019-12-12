@@ -50,10 +50,17 @@
                         <option value="" disabled="disabled" selected="true">
                             Escoger una opción
                         </option>
-                        <!-- <option value="Eventos Pedregal">
-                            Eventos Pedregal
-                        </option> -->
                     </select>
+                </div>
+
+                <div>
+                    <label for="#">Máximo Entradas</label>
+                    <input id="txt-max-entradas" type="number" placeholder="Ingrese el máximo de entradas">
+                </div>
+
+                <div>
+                    <label for="#">Precio</label>
+                    <input id="input_precio" type="String" placeholder="Ingrese el precio">
                 </div>
 
                 <div>
@@ -106,7 +113,7 @@
                 </div>
             </div>
 
-            <button id="btn_registrar" type="button">Modificar</button>
+            <button id="btn_registrar" type="button">Registrar</button>
 
         </form>
 
@@ -134,6 +141,7 @@
 
     <!--Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/autonumeric@4.1.0"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.cloudinary/1.0.18/jquery.cloudinary.js"

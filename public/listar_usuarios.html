@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/reset.css">
+    <link href='https://unpkg.com/boxicons@2.0.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/validacion.css">
+    <link rel="stylesheet" href="../public/css/administrador.css">
+    <title>Lista Usuarios</title>
+</head>
+
+<body class="grid-admin">
+    <!--Main-->
+
+    <header id="header-admin">
+        <div class="header-admin-container">
+            <a class="user-menu-link" href="#"><i class='bx bxs-face'></i> Ver Perfil</a>
+            <a class="user-menu-link" href="#"><i class='bx bx-power-off'></i> Cerrar Sesión</a>
+        </div>
+    </header>
+
+    <main id="main-admin" class="main-admin-table">
+        <div class="main-admin-titulo">
+            <h1>Listados de Usuarios</h1>
+        </div>
+
+        <div id="barra-busqueda">
+            <input type="text" id="txt-filtro" placeholder="Buscar por Nombre / Primer Apellido / Correo / Provincia">
+
+            <!-- <a href="../public/registrar_recinto.html" type="button">
+                <spans>Registrar</spans>
+                <i class='bx bx-right-arrow-circle'></i>
+            </a> -->
+        </div>
+
+        <table id="tabla-filtrado">
+            <thead>
+                <tr>
+                    <th>Usuario</th>
+                    <th>Nombre</th>
+                    <th>Primer Apellido</th>
+                    <th>Correo</th>
+                    <th>Provincia</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </main>
+
+    <aside id="sidenav-admin">
+
+        <div class="sidebar">
+
+            <div class="sidenav-menu">
+                <a class="logo"><img src="../public/img/CR T logo.png" alt="logo CR Ticket"></a>
+            </div>
+            <ul class="sidenav-menu">
+                <li class="sidenav-menu-item"><a href="listar_eventos.html"></i>Eventos</a></li>
+                <li class="sidenav-menu-item"><a href="listar_recintos.html"></i>Recintos</a></li>
+                <li class="sidenav-menu-item"><a href="listar_usuarios.html"></i>Usuarios</a></li>
+                <li class="sidenav-menu-item"><a href="#"></i>Categorias</a></li>
+                <li class="sidenav-menu-item"><a href="#"></i>Ofertas</a></li>
+                <li class="sidenav-menu-item"><a href="#"></i>Impuestos</a></li>
+                <li class="sidenav-menu-item"><a href="#"></i>Reportes</a></li>
+            </ul>
+        </div>
+
+    </aside>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/servicio_cliente.js"></script>
+    <script src="js/controlador_listar_usuarios.js"></script>
+</body>
+
+</html>
