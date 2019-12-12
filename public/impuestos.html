@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="css/landing.css">
+	<link rel="stylesheet" type="text/css" href="css/style_impuestos.css">
+</head>
+<body>
+
+	<!--header-nav-->
+    <header>
+        <nav>
+            <div class="navbar">
+                <ul>
+                    <li><a href="#home"><img src="img/CR T logo.png" alt="CR Ticket Logo" width="90" height="18"></a>
+                    </li>
+             
+                    <li style="float:right"><a href="iniciar_sesion.html">Regresar</a></li>
+
+                </ul>
+
+            </div>
+        </nav>
+
+    </header>
+
+	<div class="div_center">
+	<div class="div_content">
+	
+	<h1>Impuestos</h1>
+
+	<p>Defina el porcentaje para cada uno de los impuestos</p>
+
+	 <form class="" id="">
+            <div>
+                <label for="txt_Imp_Ventas">Nombre del Impuesto</label>
+                <input type="text" id="txt_Imp_Ventas">
+            </div>
+
+            <div>
+                <label for="nmb_Imp">Porcentaje del Impuesto</label>
+                <input type="number" id="nmb_Imp" min="0" max="999">
+            </div>
+            <button type="button" class="btn_Registrar" id="btnRegistrarImpuesto">Registar Impuesto</button>
+    </form>
+
+    <button type="button" class="btn_Registrar"  id="btnImpRegistrados">Ver Impuestos Registrados</button>
+
+	</div>
+
+	</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="js/servicio_impuestos.js"></script>
+    <script src="js/controlador_impuestos.js"></script>
+</body>
+</html>

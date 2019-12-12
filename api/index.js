@@ -43,9 +43,12 @@ const recinto = require('./componentes/registro_recinto/recinto.route');
 
 const usuario = require('./componentes/registro_usuario/usuario.route');
 
+const impuestos = require('./components/impuestos/impuestos.route');
+
 app.use('/api', evento);
 app.use('/api', recinto);
 app.use('/api', usuario);
+app.use('/api', impuestos);
 
 module.exports = app;
 
