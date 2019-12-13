@@ -5,6 +5,9 @@ module.exports.registrar_evento = function (req, res) {
         {
             imagen: req.body.imagen,
             nombre: req.body.nombre,
+            max_entradas: req.body.max_entradas,
+            precio: req.body.precio,
+            nombre: req.body.nombre,
             recinto: req.body.recinto,
             fecha_inicio: req.body.fecha_inicio,
             fecha_finalizacion: req.body.fecha_finalizacion,

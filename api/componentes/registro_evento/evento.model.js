@@ -6,6 +6,8 @@ const mongoose = require('mongoose');
 
 let evento_schema = new mongoose.Schema({
     imagen: { type: String, required: false },
+    max_entradas: { type: String, required: false },
+    precio: { type: String, required: false },
     nombre: { type: String, required: false },
     recinto: { type: String, required: false },
     fecha_inicio: { type: String, required: false },

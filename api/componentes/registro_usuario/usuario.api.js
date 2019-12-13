@@ -80,6 +80,19 @@ module.exports.listar_usuario_id = function (req, res) {
     })
 };
 
+module.exports.eliminar_usuario = function (req, res) {
+    let body = req.body;
+
+    Usuario.findByIdAndRemove(body._id,
+        function (error) {
+            if (error) {
+                res.json({ success: false, msg: 'No se pudo borrar el campo' });
+            } else {
+                res.json({ success: true, msg: 'El campo se borró con éxito' });
+            }
+        }
+    )
+};
 
 //REQUERIDO PARA INICIO DE SESION
 

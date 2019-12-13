@@ -26,6 +26,11 @@ router.route('/listar_usuario/:_id')
     }
     );
 
+router.route('/eliminar_usuario')
+    .post(function (req, res) {
+        api_cliente.eliminar_usuario(req, res);
+    }
+    );
 
 //REQUERIDO PARA INICIO DE SESION
 router.route('/validar_credenciales')
@@ -34,5 +39,4 @@ router.route('/validar_credenciales')
             api_cliente.validar_credenciales(req, res);
         }
     );
-
 module.exports = router; 
