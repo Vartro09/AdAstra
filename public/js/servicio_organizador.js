@@ -38,7 +38,7 @@ let obtenerUsuarios = async () => {
 
         const result = await response;
 
-        return result.data.lista_usuarios;
+        return result.data.usuario;
     } catch (error) {
         alert(error);
     }

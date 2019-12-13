@@ -26,6 +26,8 @@ router.route('/listar_usuario/:_id')
     }
     );
 
+
+//REQUERIDO PARA INICIO DE SESION
 router.route('/validar_credenciales')
     .post(
         function(req, res){

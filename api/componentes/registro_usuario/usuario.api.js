@@ -81,6 +81,8 @@ module.exports.listar_usuario_id = function (req, res) {
 };
 
 
+//REQUERIDO PARA INICIO DE SESION
+
 module.exports.validar_credenciales = function(req, res){
     Usuario.findOne({correo: req.body.correo}).then{
         function(usuario){

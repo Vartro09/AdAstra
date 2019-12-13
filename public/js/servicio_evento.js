@@ -1,6 +1,6 @@
 'use strict';
 
-let registrar_evento = (pimagen, pnombre, precinto, pfecha_inicio, pfecha_finalizacion, ptipo_evento, pencargado, pubicacion, pprovincia, pcanton, pdistrito) => {
+let registrar_evento = (pimagen, pnombre, pmax_entradas, pprecio, precinto, pfecha_inicio, pfecha_finalizacion, ptipo_evento, pencargado, pubicacion, pprovincia, pcanton, pdistrito) => {
     axios({
         method: 'post',
         url: 'http://localhost:4000/api/registrar_evento',
@@ -8,6 +8,8 @@ let registrar_evento = (pimagen, pnombre, precinto, pfecha_inicio, pfecha_finali
         data: {
             imagen: pimagen,
             nombre: pnombre,
+            max_entradas: pmax_entradas,
+            precio: pprecio,
             recinto: precinto,
             fecha_inicio: pfecha_inicio,
             fecha_finalizacion: pfecha_finalizacion,
@@ -70,7 +72,7 @@ let obtenerEventoid = async (_id) => {
     }
 };
 
-let modificarEvento = (p_id, pimagen, pnombre, precinto, pfecha_inicio, pfecha_finalizacion, ptipo_evento, pencargado, pubicacion, pprovincia, pcanton, pdistrito) => {
+let modificarEvento = (p_id, pimagen, pnombre, pmax_entradas, pprecio, precinto, pfecha_inicio, pfecha_finalizacion, ptipo_evento, pencargado, pubicacion, pprovincia, pcanton, pdistrito) => {
     axios({
         method: 'post',
         url: 'http://localhost:4000/api/modificar_evento',
@@ -79,6 +81,8 @@ let modificarEvento = (p_id, pimagen, pnombre, precinto, pfecha_inicio, pfecha_f
             _id: p_id,
             imagen: pimagen,
             nombre: pnombre,
+            max_entradas: pmax_entradas,
+            precio: pprecio,
             recinto: precinto,
             fecha_inicio: pfecha_inicio,
             fecha_finalizacion: pfecha_finalizacion,

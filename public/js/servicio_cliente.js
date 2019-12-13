@@ -36,7 +36,7 @@ let obtenerUsuarios = async () => {
 
         const result = await response;
 
-        return result.data.lista_usuarios;
+        return result.data.usuarios;
     } catch (error) {
         alert(error);
     }
@@ -56,4 +56,15 @@ let obtenerUsuarioId = async (_id) => {
     } catch (error) {
         console.log(error);
     }
+};
+
+let eliminarUsuario = (pid) => {
+    axios({
+        method: 'post',
+        url: 'http://localhost:4000/api/eliminar_usuario',
+        responseType: 'json',
+        data: {
+            _id: pid
+        }
+    });
 };

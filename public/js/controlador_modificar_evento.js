@@ -6,6 +6,8 @@ const CLOUDINARY_UPLOAD_PRESET = 'bydp1axd';
 //Constantes
 const img_uploader_imagen = document.querySelector('#portada');
 const input_nombre = document.querySelector('#txt-nombre');
+const input_max_entradas = document.querySelector('#txt-max-entradas');
+const input_precio = document.querySelector('#input_precio');
 const input_recinto = document.querySelector('#txt-recinto');
 const input_fecha_inicio = document.querySelector('#txt-fecha_inicio');
 const input_fecha_finalizacion = document.querySelector('#txt-fecha_finalizacion');
@@ -17,6 +19,12 @@ const input_canton = document.querySelector('#txt-canton');
 const input_distrito = document.querySelector('#txt-distrito');
 //Btn para registrar
 const boton_registrar = document.querySelector('#btn_registrar');
+
+const anElement = new AutoNumeric('#input_precio', {
+    currencySymbol: '₡',
+    decimalCharacter: ',',
+    digitGroupSeparator: '.',
+});
 
 const urlParams = new URLSearchParams(window.location.search);
 let _id = urlParams.get('_id');
@@ -30,6 +38,8 @@ let llenar_formulario = async () => {
         //Datos
         img_uploader_imagen.src = evento['imagen'];
         input_nombre.value = evento['nombre'];
+        input_max_entradas.value = evento['max_entradas'];
+        input_precio.value = evento['precio'];
         input_recinto.value = evento['recinto']
         //////////////////////////
         //Datos de Fecha de inicio
@@ -107,7 +117,7 @@ let llenarDistritos = (pNombreCanton) => {
 
 }
 
-let validar = (pnombre, precinto, pfecha_inicio, pfecha_finalizacion, ptipo_evento, pencargado, pubicacion, pprovincia, pcanton, pdistrito) => {
+let validar = (pnombre, pmax_entradas, pprecio, precinto, pfecha_inicio, pfecha_finalizacion, ptipo_evento, pencargado, pubicacion, pprovincia, pcanton, pdistrito) => {
 
     let error = false;
 
@@ -126,6 +136,20 @@ let validar = (pnombre, precinto, pfecha_inicio, pfecha_finalizacion, ptipo_even
         input_nombre.classList.remove('input_error');
     }
 
+    if (pmax_entradas == '') {
+        error = true;
+        input_max_entradas.classList.add('input_error');
+    } else {
+        input_max_entradas.classList.remove('input_error');
+    }
+
+    if (pprecio.includes('-') || pprecio == '') {
+        error = true;
+        input_precio.classList.add('input_error');
+    } else {
+        input_precio.classList.remove('input_error');
+    }
+
     if (precinto == '') {
         error = true;
         input_recinto.classList.add('input_error');
@@ -136,6 +160,10 @@ let validar = (pnombre, precinto, pfecha_inicio, pfecha_finalizacion, ptipo_even
     if (pfecha_inicio == '') {
         error = true;
         input_fecha_inicio.classList.add('input_error');
+    } else if (pfecha_inicio >= pfecha_finalizacion) {
+        error = true;
+        input_fecha_inicio.classList.add('input_error');
+        input_fecha_finalizacion.classList.add('input_error');
     } else {
         input_fecha_inicio.classList.remove('input_error');
     }
@@ -143,9 +171,14 @@ let validar = (pnombre, precinto, pfecha_inicio, pfecha_finalizacion, ptipo_even
     if (pfecha_finalizacion == '') {
         error = true;
         input_fecha_finalizacion.classList.add('input_error');
+    } else if (input_fecha_finalizacion <= pfecha_inicio) {
+        error = true;
+        input_fecha_finalizacion.classList.add('input_error');
+        input_fecha_inicio.classList.add('input_error');
     } else {
         input_fecha_finalizacion.classList.remove('input_error');
     }
+
 
     if (ptipo_evento == '') {
         error = true;
@@ -196,6 +229,8 @@ function obtener_datos() {
 
     let imagen = img_uploader_imagen.src;
     let nombre = input_nombre.value;
+    let max_entradas = input_max_entradas.value;
+    let precio = input_precio.value;
     let recinto = input_recinto.value;
     let fecha_inicio = input_fecha_inicio.value;
     let fecha_finalizacion = input_fecha_finalizacion.value;
@@ -206,10 +241,10 @@ function obtener_datos() {
     let canton = input_canton.value;
     let distrito = input_distrito.value;
 
-    let error = validar(nombre, recinto, fecha_inicio, fecha_finalizacion, tipo_evento, encargado, ubicacion, provincia, canton, distrito);
+    let error = validar(nombre, max_entradas, precio, recinto, fecha_inicio, fecha_finalizacion, tipo_evento, encargado, ubicacion, provincia, canton, distrito);
 
     if (error == false) {
-        modificarEvento(_id, imagen, nombre, recinto, fecha_inicio, fecha_finalizacion, tipo_evento, encargado, ubicacion, provincia, canton, distrito);
+        modificarEvento(_id, imagen, nombre, max_entradas, precio, recinto, fecha_inicio, fecha_finalizacion, tipo_evento, encargado, ubicacion, provincia, canton, distrito);
         Swal.fire({ //formato json
             title: 'Se ha registrado la información exitosamente',
             type: 'success',
